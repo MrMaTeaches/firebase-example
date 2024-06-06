@@ -1,5 +1,6 @@
 import { Canvas } from "./canvas.js";
-import { nanoid } from "nanoid";
+//@ts-ignore Import module
+import { nanoid } from "https://cdnjs.cloudflare.com/ajax/libs/nanoid/3.3.4/nanoid.min.js";
 
 class Hero {
   private h: number = 25;
