@@ -1,5 +1,4 @@
 import { Hero } from "./hero";
-import { update, ref } from "firebase/database";
 
 interface Command {
   execute(): void;
