@@ -4,28 +4,28 @@ interface Command {
   execute(): void;
 }
 
-class MoveRightCommand {
+class MoveRightCommand implements Command {
   constructor(private hero: Hero) {}
 
   public execute(): void {
     this.hero.moveRight();
   }
 }
-class MoveLeftCommand {
+class MoveLeftCommand implements Command {
   constructor(private hero: Hero) {}
 
   public execute(): void {
     this.hero.moveLeft();
   }
 }
-class MoveUpCommand {
+class MoveUpCommand implements Command {
   constructor(private hero: Hero) {}
 
   public execute(): void {
     this.hero.moveUp();
   }
 }
-class MoveDownCommand {
+class MoveDownCommand implements Command {
   constructor(private hero: Hero) {}
 
   public execute(): void {

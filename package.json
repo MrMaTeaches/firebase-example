@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/firebase": "^3.2.1",
+    "live-server": "^1.2.2",
     "typescript": "^5.4.5"
   }
 }
