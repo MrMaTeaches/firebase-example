@@ -1,11 +1,11 @@
 import { Canvas } from "./canvas.js";
+import { Player } from "./character.js";
 import { MoveDownCommand, MoveLeftCommand, MoveRightCommand, MoveUpCommand, } from "./command.js";
 import { Controller } from "./controller.js";
-import { Hero } from "./hero.js";
 class Game {
     FPS = 60;
     timeInterval = 1000 / this.FPS;
-    hero = new Hero();
+    hero = new Player();
     controller = new Controller(new MoveUpCommand(this.hero), new MoveLeftCommand(this.hero), new MoveDownCommand(this.hero), new MoveRightCommand(this.hero));
     constructor() {
         setInterval(() => {

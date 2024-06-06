@@ -1,4 +1,5 @@
 import { Canvas } from "./canvas.js";
+import { Character, Player } from "./character.js";
 import {
   MoveDownCommand,
   MoveLeftCommand,
@@ -6,12 +7,11 @@ import {
   MoveUpCommand,
 } from "./command.js";
 import { Controller } from "./controller.js";
-import { Hero } from "./hero.js";
 
 class Game {
   private FPS: number = 60;
   private timeInterval: number = 1000 / this.FPS;
-  private hero: Hero = new Hero();
+  private hero: Player = new Player();
   private controller: Controller = new Controller(
     new MoveUpCommand(this.hero),
     new MoveLeftCommand(this.hero),
