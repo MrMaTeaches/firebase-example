@@ -19,6 +19,11 @@ class Character {
   protected randomizer(val: number): number {
     return Math.floor(Math.random() * val);
   }
+  
+  public draw(): void {
+    Canvas.instance.context.fillStyle = this._colour;
+    Canvas.instance.context.fillRect(this._x, this._y, this.w, this.h);
+  }
 }
 
 class Player extends Character {
@@ -52,11 +57,6 @@ class Player extends Character {
   }
   public moveDown(): void {
     this._y += this.moveSpeed;
-  }
-
-  public draw(): void {
-    Canvas.instance.context.fillStyle = this._colour;
-    Canvas.instance.context.fillRect(this._x, this._y, this.w, this.h);
   }
 }
 

@@ -15,6 +15,10 @@ class Character {
     randomizer(val) {
         return Math.floor(Math.random() * val);
     }
+    draw() {
+        Canvas.instance.context.fillStyle = this._colour;
+        Canvas.instance.context.fillRect(this._x, this._y, this.w, this.h);
+    }
 }
 class Player extends Character {
     moveSpeed = 1;
@@ -42,10 +46,6 @@ class Player extends Character {
     }
     moveDown() {
         this._y += this.moveSpeed;
-    }
-    draw() {
-        Canvas.instance.context.fillStyle = this._colour;
-        Canvas.instance.context.fillRect(this._x, this._y, this.w, this.h);
     }
 }
 export { Character, Player };
